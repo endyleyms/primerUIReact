@@ -1,14 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, AppRegistry } from 'react-native';
+import { StyleSheet, View, FlatList, Text } from 'react-native';
 import Card from './component/card';
 import data from './data';
 
 export default function App() {
+  const renderCard = ({ item })=>{
+    return <Card author={item.author} about={item.about}/>
+  }
   return (
     <View style={styles.container}>
-      {data.map((element)=>{
-        <Card key={element.id} picture={element.picture} author={element.author} about={element.about} tags={element.tags} comments={element.comments}/>
-      })}
+        <FlatList
+          data={data}
+          renderItem={renderCard}
+          keyExtractor={item => item.id}
+        />     
       <StatusBar style="auto" />
     </View>
   );
@@ -23,4 +28,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Appname', () => App);
+
