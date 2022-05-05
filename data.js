@@ -1,4 +1,4 @@
-[
+const data = [
     {
       "id": "620151c6fc387576b9b079b4",
       "picture": "http://placehold.it/32x32",
@@ -158,3 +158,5 @@
       ]
     }
   ]
+
+export default data;
