@@ -1,6 +1,6 @@
 import { StyleSheet, View, Image, Text } from 'react-native';
 
-const Card = ({author, about, comments, tags, picture }) => {
+const Card = ({author, about, comments, tags, picture, email }) => {
     return(
         <View style={styles.container}>
             <View>
@@ -10,6 +10,7 @@ const Card = ({author, about, comments, tags, picture }) => {
                 />            
             </View>
             <Text style={styles.author}><strong>Author:{author}</strong></Text>
+            <Text style={styles.author}><strong>Email:{email}</strong></Text>
             <Text style={styles.about}><strong>About:</strong> {about}</Text>
             <Text style={styles.author}><strong>Tags:</strong> {tags}</Text>
             <Text><strong>Comments: {comments.length}</strong></Text>  

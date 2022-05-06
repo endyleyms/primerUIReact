@@ -5,7 +5,7 @@ import data from './data';
 
 export default function App() {
   const renderCard = ({ item })=>{
-    return <Card picture={item.picture} author={item.author} about={item.about} tags={item.tags} comments={item.comments}/>
+    return <Card picture={item.picture} author={item.author} email={item.email} about={item.about} tags={item.tags} comments={item.comments}/>
   }
   return (
     <View style={styles.container}>
